@@ -32,7 +32,24 @@ public class Logica {
             }
         }
 
+
+
+if (totalBruto > 100000) {
+            double descuento = totalBruto * 0.10;
+            totalBruto = totalBruto - descuento;
 }
+double valorIva = totalBruto * IVA;
+        totalBruto = totalBruto + valorIva;
 
-
+        double porcentajePremium = 0.0;
+        if (totalArticulos > 0) {
+            porcentajePremium = ((double) articulosPremium / totalArticulos) * 100;
+        }
+        System.out.println("Total articulos: " + totalArticulos);
+        System.out.println("Total a pagar: $" + totalBruto);
+        System.out.println("Porcentaje premium: " + porcentajePremium + "%");
+        
+        market.close();
+    }
+}    
 
